@@ -16,7 +16,7 @@ const MovieList = ({ name }) => {
   return (
     <div className='mb-4'>
       <h1>{name}</h1>
-      <div className='flex gap-x-2 overflow-scroll w-screen'>
+      <div className='flex gap-x-6 overflow-x-auto'>
         {movie &&
           movie.map((film) => {
             return (
