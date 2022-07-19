@@ -4,7 +4,7 @@ import MovieList from './MovieList';
 
 const Movies = () => {
   const [search, setSearch] = useState('');
-  const [searched, setSearched] = useState([]);
+  const [searched, setSearched] = useState();
   const fetchSearch = async () => {
     const res = await fetch(
       `http://www.omdbapi.com/?apiKey=17b9017e&s=${search}`
@@ -31,7 +31,7 @@ const Movies = () => {
       </form>
       {search !== '' ? (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-4'>
-          {searched.length > 0 &&
+          {searched &&
             searched.map((movie) => {
               return <SearchList image={movie.Poster} title={movie.Title} />;
             })}
