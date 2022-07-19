@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Header = () => {
   return (
     <div className='w-screen bg-[#292929] py-4 px-8 flex justify-center md:justify-start'>
